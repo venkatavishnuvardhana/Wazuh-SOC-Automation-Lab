@@ -9,7 +9,7 @@ The environment consists of a cross-platform network featuring a dedicated SIEM 
 *   **Endpoint Monitoring:** Sysmon integrated with the Wazuh agent for process-level visibility.
 *   **Network:** All telemetry is encrypted and shipped via Port 1514.
 
-![Lab Topology](lab_topology_diagram.png)
+![Lab Topology](./lab_topology_diagram.png.png)
 
 ## **3. Advanced Threat Detections**
 
