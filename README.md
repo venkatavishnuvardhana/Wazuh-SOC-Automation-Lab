@@ -9,7 +9,7 @@ The environment consists of a cross-platform network featuring a dedicated SIEM 
 *   **Endpoint Monitoring:** Sysmon integrated with the Wazuh agent for process-level visibility.
 *   **Network:** All telemetry is encrypted and shipped via Port 1514.
 
-![Lab Topology](./lab_topology_diagram.png)
+![Lab Topology](lab_topology_diagram.png)
 
 ## **3. Advanced Threat Detections**
 
@@ -17,17 +17,17 @@ The environment consists of a cross-platform network featuring a dedicated SIEM 
 I configured custom detection logic to identify unauthorized administrative changes and identity manipulation.
 *   **Analysis:** The SIEM successfully correlated the creation of a new user account with its subsequent promotion to the "Administrators" group, triggering a high-severity alert.
 *   **Evidence:**
-![Privilege Escalation](./privilege_escalation_evidence.png)
+![Privilege Escalation](privilege_escalation_evidence.png)
 
 ### **Case Study 2: Process Injection & Defense Evasion (T1055)**
 Using Sysmon Event ID 8 (CreateRemoteThread), I detected a "Fileless" attack where malicious code was injected into a legitimate system process.
 *   **Analysis:** Monitoring `explorer.exe` for suspicious thread activity allowed for the detection of memory-resident malware that standard Windows Event Logs would have bypassed.
 *   **Evidence:**
-![Process Injection Alert](./process_injection_alert.png)
+![Process Injection Alert](process_injection_alert.png)
 
 ## **4. Operational Dashboard**
 The SIEM dashboard provides real-time situational awareness, tracking security events mapped across the MITRE ATT&CK framework.
-![SIEM Dashboard](./siem_operational_dashboard.png)
+![SIEM Dashboard](siem_operational_dashboard.png)
 
 ## **5. Technical Skills Demonstrated**
 *   **SIEM Operations:** Log collection, decoder/rule configuration, and alert engineering.
