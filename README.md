@@ -34,26 +34,3 @@ The SIEM dashboard provides real-time situational awareness, tracking security e
 *   **Endpoint Detection (EDR):** Deploying and tuning Sysmon for high-fidelity telemetry.
 *   **Attack Simulation:** Executing controlled exploits using Atomic Red Team to validate defenses.
 *   **Infrastructure:** Linux/Windows administration and Docker containerization.
-
-## **Project Architecture**
-
-[ Targeted Windows 10 Endpoint ]
-         │  (Generates Host Telemetry)
-         ▼
-  ┌──────────────┐
-  │ Sysmon Logs  │ ──► Captures Process Spawning & Registry Changes
-  └──────────────┘
-         │
-         ▼ (Forwarded via Encrypted Agent Channel)
-  ┌──────────────────────────────────────────────┐
-  │         Containerized Wazuh Manager          │ ──► Runs inside Docker Compose
-  │ (Decodes, Parses, & Correlates Log Telemetry)│
-  └──────────────────────────────────────────────┘
-         │
-         ▼ (Triggers Detection Alerts)
-  ┌──────────────────────────────────────────────┐
-  │       Wazuh Dashboard / Alerts Panel        │ ──► Security Analyst Interface
-  └──────────────────────────────────────────────┘
-         │
-         ▼ (If Rule Triggers Active Response)
-  [ Automated Containment Script Executed on Endpoint ]
